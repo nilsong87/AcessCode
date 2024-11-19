@@ -1,0 +1,124 @@
+/* Estilo para o título principal */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box; /* Define o box-sizing como border-box para todos os elementos */
+}
+
+
+
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box; /* Define o box-sizing como border-box para todos os elementos */
+}
+
+/* Pré definição do html e Fonte */
+/* Define a altura do body e html como 100% da altura da viewport e aplica estilos globais */
+body, html {
+    height: 100%; /* Define a altura como 100% da altura da viewport */
+    font-family: "Nova Square", sans-serif; /* Define a fonte padrão como 'Nova Square' */
+    background-color: #000; /* Define a cor de fundo como preto */
+}
+
+/* Estilo para o título h1 */
+h1 {
+    color: #333; /* Define a cor do texto como cinza escuro */
+}
+
+/* Estilo para o botão de execução */
+.botaoj {
+    padding: 10px 20px; /* Define o padding interno do botão */
+    margin-top: 20px; /* Define a margem superior do botão */
+    background-color: #4CAF50; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    cursor: pointer; /* Define o cursor como ponteiro ao passar o mouse */
+    font-size: 16px; /* Define o tamanho da fonte do botão */
+}
+
+/* Estilo para o botão ao passar o mouse */
+button:hover {
+    background-color: #45a049; /* Muda a cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilos dos Blocos */
+.block {
+    width: 38%; /* Largura do bloco */
+    height: 5%; /* Altura do bloco (corrigir para 10px se necessário) */
+    margin: 3px; /* Margem ao redor do bloco */
+    padding: 5px; /* Espaçamento interno do bloco */
+    border: 1px solid #000; /* Borda do bloco */
+    display: inline-block; /* Exibição em linha */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    background-color: #fff; /* Cor de fundo do bloco */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra do bloco */
+    transition: transform 0.2s; /* Transição suave ao transformar */
+    font-family: Arial, Helvetica, sans-serif, sans-serif; /* Define a fonte padrão como 'Nova Square' */
+}
+
+/* Estilo para o bloco ao passar o mouse */
+.block:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do bloco */
+}
+
+/* Estilo para o contêiner dos blocos */
+#blocks-container {
+    font-size: 13px; /* Tamanho da fonte dos blocos */   
+}
+
+/* Estilos da Área de Soltar */
+.dropzone {
+    width: 400px; /* Define a largura da área de soltar */
+    height: 150px; /* Define a altura da área de soltar */
+    border: 2px dashed #000; /* Define a borda tracejada da área de soltar */
+    margin: 20px auto; /* Define a margem ao redor da área de soltar e centraliza horizontalmente */
+    background-color: #fff; /* Define a cor de fundo da área de soltar */
+    display: flex; /* Usa flexbox para alinhar os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra à área de soltar para dar profundidade */
+    font-size: 16px; /* Define o tamanho da fonte na área de soltar */
+    .block {
+        width: 14%; /* Define a largura dos blocos dentro da área de soltar */
+        height: 30%; /* Define a altura dos blocos dentro da área de soltar */
+    }
+}
+
+/* Estilo para o resultado */
+#result {
+    margin-top: 20px; /* Margem superior */
+    font-size: 18px; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilos do Código Gerado */
+#codeContainer {
+    width: 20%; /* Largura do contêiner de código */
+    margin-top: 10px; /* Margem superior */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    font-size: 14px; /* Tamanho da fonte */
+    display: none; /* Inicialmente oculto */
+}
+
+/* Estilo para o título do contêiner de código */
+#codeContainer h2 {
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo para a exibição do código */
+#codeDisplay {
+    background-color: #f4f4f4; /* Cor de fundo */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ddd; /* Borda */
+    white-space: pre-wrap; /* Mantém os espaços em branco */
+}
+
+.codigo-gerado{
+    margin-left: 100px;
+}
+
+.resultado-cod {
+    display: flex; /* Define a exibição como flexível para alinhar os itens */
+    text-align: center; /* Centraliza o texto dentro dos itens flexíveis */
+}
