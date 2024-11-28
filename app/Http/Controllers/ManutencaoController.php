@@ -11,3 +11,11 @@ class ManutencaoController extends Controller
         return view('manutencao.manutencao');
     }
 }
+
+class ManutencaoLoginController extends Controller
+{
+    public function index()
+    {
+        return view('manutencao-login');
+    }
+}

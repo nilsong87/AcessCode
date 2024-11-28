@@ -2,26 +2,24 @@
 
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ManutencaoController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 // Rota para a página inicial
-Route::get('/', [HomeController::class,'index']);
+Route::get('/', [HomeController::class, 'index']);
 
 // Rota para a página de FAQ
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 
 // Rota para a página de manutenção
-Route::get('/manutencao', [ManutencaoController::class, 'index'])->name('manutencao');
+Route::get('/manutencao', [AuthController::class, 'showManutencao'])->name('manutencao')->middleware('auth');
 
-// Rota para a página de manutenção-login
-Route::get('/manutencao-login', function () {
-    return view('manutencao-login');
-})->name('manutencao');
+// Rotas para login e logout
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Rota para a página de App
 Route::get('/app', function () {
     return view('app');
 })->name('app');
-
-
