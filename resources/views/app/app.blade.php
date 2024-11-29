@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Coda:wght@400;800&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  
   @vite('resources/css/style.css')
   @vite('resources/css/gamea.css')
   <title>Acess Code - Aplicativo</title>
@@ -16,7 +17,7 @@
 <body>
   <div class="game-board">
     <div class="header-app">
-      <a href="/"><img class="img-logo" src="{{Vite::asset('resources/assets/image/logo-nova-positivo.jpg')}}" alt="imagem do logo"></a>
+      <a href="/"><img class="img-logo" src="{{ Vite::asset('resources/assets/image/logo-positivo-fotor-2024100820480.jpg') }}" alt="imagem do logo"></a>
       <nav>
         <div class="pecas" id="blocks-container">
 

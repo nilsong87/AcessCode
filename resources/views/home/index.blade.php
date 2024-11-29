@@ -11,7 +11,8 @@
                 programação e descubra como podemos ajudar você a aprender a programar
                 de forma inclusiva e acessível.
             </p>
-            <button class="login-btn" onclick="window.location.href='app.html';">Teste Agora</button> <!-- Botão para testar o aplicativo -->
+            <button class="login-btn" onclick="window.location.href='{{ route('app') }}';">Teste Agora</button> <!-- Botão para testar o aplicativo -->
+
         </div>
     </main>
 
@@ -32,7 +33,7 @@
                 </p>
             </div>
 
-            <button class="login-btn" onclick="window.location.href='app.html';">Acess Code</button> <!-- Botão para acessar o aplicativo -->
+            <button class="login-btn" onclick="window.location.href='{{ route('app') }}';">Acess Code</button> <!-- Botão para acessar o aplicativo -->
         </div>
 
         <div class="lado-direito"> <!-- Div do lado direito -->
@@ -155,7 +156,7 @@
                         <a href="https://github.com/Leal410" target="_blank" class="link-roxo">
                             <p class="func-func"><i class="bi bi-github"></i></p>
                         </a>
-                    </div>           
+                    </div>
 
                     <div class="carousel-box">
                         <img src="{{ Vite::asset('resources/assets/image/99.jpg') }}" class="img-c" alt="Funcionário 7">
@@ -168,12 +169,12 @@
                             <p class="func-func"><i class="bi bi-github"></i></p>
                         </a>
                     </div>
-                    
+
                     <!-- Adicionar mais caixas conforme necessário -->
                 </div>
                 <div class="carousel-buttons"> <!-- Botões para navegação no carrossel -->
                     <button id="prevBtn"><</button>
-                            <button id="nextBtn">></button>
+                    <button id="nextBtn">></button>
                 </div>
             </div>
         </div>
@@ -209,3 +210,4 @@
     </div>
 
 </x-layout>
+

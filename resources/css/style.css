@@ -7,6 +7,8 @@
     /* Define o box-sizing como border-box para todos os elementos */
 }
 
+
+
 /* Pré definição do html e Fonte */
 body,
 html {
@@ -150,7 +152,7 @@ Algumas instruções para por o texto e a imagem da propaganda da pagina sobre a
     background-color: rgba(0, 0, 0, 0.7);
     /* Define a cor de fundo como preto transparente */
     color: rgb(255, 255, 255);
-    /* Define a cor do texto como branco */
+    /* Define a cor do texto como branco */    
     padding: 40px;
     /* Define o padding (espaçamento interno) */
     border-radius: 10px;
@@ -161,6 +163,7 @@ Algumas instruções para por o texto e a imagem da propaganda da pagina sobre a
     /* Define a largura como 80% do elemento pai */
     max-width: 600px;
     /* Define a largura máxima */
+    
 }
 
 /* Botão para fechar o folder */
@@ -181,12 +184,20 @@ Algumas instruções para por o texto e a imagem da propaganda da pagina sobre a
     /* Define o tamanho da fonte */
     cursor: pointer;
     /* Define o cursor como pointer (mãozinha) */
+    margin-bottom: 20px;
+    /* Espaçamento abaixo do botão de fechar */
 }
 
 .titulo-folder {
     color: #00ff00;
     /* Define a cor do texto como verde */
+    margin-bottom: 15px;
+    /* Espaçamento abaixo do título */
 }
+
+.folder .login-btn {
+    margin-top: 20px; /* Espaçamento acima do botão de login */
+  }
 
 /* Login e Cadastro */
 .modal {

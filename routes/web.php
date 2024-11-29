@@ -3,6 +3,7 @@
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AppController;
 use Illuminate\Support\Facades\Route;
 
 // Rota para a página inicial
@@ -20,6 +21,4 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Rota para a página de App
-Route::get('/app', function () {
-    return view('app');
-})->name('app');
+Route::get('/app', [AppController::class, 'index'])->name('app');

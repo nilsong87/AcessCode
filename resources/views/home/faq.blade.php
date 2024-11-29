@@ -72,12 +72,9 @@
     </div>
 </div>
 <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-<script>
+  <script>
     new window.VLibras.Widget('https://vlibras.gov.br/app');
-</script>
+  </script>
 @vite('resources/js/script.js')
-
-
 </body>
-
 </html>

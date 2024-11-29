@@ -1,3 +1,5 @@
+// resources/js/script.js
+
 /* Menu do Header */
 function toggleMenu() {
   const navLinks = document.querySelector('.nav-links');
@@ -228,3 +230,6 @@ function login() {
 }
 
 window.onload = checkAuth;
+
+/*------------------------------------------------------------------------------------------------------------------------------------------*/
+
