@@ -12,7 +12,6 @@
                 de forma inclusiva e acessível.
             </p>
             <button class="login-btn" onclick="window.location.href='{{ route('app') }}';">Teste Agora</button> <!-- Botão para testar o aplicativo -->
-
         </div>
     </main>
 
@@ -156,7 +155,7 @@
                         <a href="https://github.com/Leal410" target="_blank" class="link-roxo">
                             <p class="func-func"><i class="bi bi-github"></i></p>
                         </a>
-                    </div>
+                    </div>           
 
                     <div class="carousel-box">
                         <img src="{{ Vite::asset('resources/assets/image/99.jpg') }}" class="img-c" alt="Funcionário 7">
@@ -169,12 +168,12 @@
                             <p class="func-func"><i class="bi bi-github"></i></p>
                         </a>
                     </div>
-
+                    
                     <!-- Adicionar mais caixas conforme necessário -->
                 </div>
                 <div class="carousel-buttons"> <!-- Botões para navegação no carrossel -->
                     <button id="prevBtn"><</button>
-                    <button id="nextBtn">></button>
+                            <button id="nextBtn">></button>
                 </div>
             </div>
         </div>
@@ -210,4 +209,3 @@
     </div>
 
 </x-layout>
-

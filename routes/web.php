@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AppController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 // Rota para a página inicial
@@ -21,4 +21,4 @@ Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Rota para a página de App
-Route::get('/app', [AppController::class, 'index'])->name('app');
+Route::get('/app', function () {return view('app.app');})->name('app');
