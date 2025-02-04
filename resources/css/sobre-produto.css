@@ -1,0 +1,148 @@
+/*  início Página sobre */
+
+/* Estiliza a seção sobre o produto */
+.sobre-produto {
+    width: 100%;
+    /* Define a largura como 100% do elemento pai */
+    height: 1080px;
+    display: flex;
+    /* Define o layout como flexbox */
+    justify-content: center;
+    /* Centraliza os itens horizontalmente */
+    padding-top: 10rem;
+    /* Define o padding superior */
+    padding-bottom: 5rem;
+    /* Define o padding inferior */
+    background-color: #008829;
+}
+
+/* Estiliza o lado esquerdo da seção sobre o produto */
+.sobre-produto .lado-esquerdo {
+    width: 40%;
+    /* Define a largura como 40% do elemento pai */
+    display: flex;
+    /* Define o layout como flexbox */
+    align-items: center;
+    /* Alinha os itens ao centro verticalmente */
+    flex-direction: column;
+    /* Define a direção dos itens como coluna */
+}
+
+/* Estiliza o primeiro filho div do lado esquerdo */
+.sobre-produto .lado-esquerdo div:nth-child(1) {
+    display: flex;
+    /* Define o layout como flexbox */
+    align-items: start;
+    /* Alinha os itens ao início verticalmente */
+    justify-content: start;
+    /* Alinha os itens ao início horizontalmente */
+    flex-direction: column;
+    /* Define a direção dos itens como coluna */
+    gap: 0.1rem;
+    /* Define o espaçamento entre os itens */
+    margin-bottom: 6rem;
+    /* Define a margem inferior */
+}
+
+/* Estiliza o título h2 dentro do primeiro filho div do lado esquerdo */
+.sobre-produto .lado-esquerdo div:nth-child(1) h2 {
+    color: #ffffff;
+    /* Define a cor do texto como verde */
+    width: 448px;
+    /* Define a largura */
+    height: 122px;
+    /* Define a altura */
+    font-size: 40px;
+    /* Define o tamanho da fonte */
+    text-align: center;
+    /* Centraliza o texto */
+    line-height: 40px;
+    /* Define a altura da linha */
+    margin-left: 175px;
+    /* Define a margem esquerda */
+    margin-top: 80px;
+    /* Define a margem superior */
+}
+
+/* Estiliza o botão no lado esquerdo */
+.sobre-produto .lado-esquerdo button {
+    margin-right: 30px;
+    /* Define a margem direita */
+    width: 238.11px;
+    /* Define a largura */
+    height: 55px;
+    /* Define a altura */
+}
+
+/* Estiliza o texto sobre o produto */
+.texto-sobre {
+    font-size: 22px;
+    /* Define o tamanho da fonte */
+    text-align: center;
+    /* Centraliza o texto */
+    line-height: 25px;
+    /* Define a altura da linha */
+}
+
+/* Estiliza o lado direito da seção sobre o produto */
+.sobre-produto .lado-direito {
+    width: 50%;
+    /* Define a largura como 50% do elemento pai */
+    display: flex;
+    /* Define o layout como flexbox */
+    flex-direction: column;
+    /* Define a direção dos itens como coluna */
+    align-items: end;
+    /* Alinha os itens ao final horizontalmente */
+    justify-content: space-around;
+    /* Distribui os itens com espaço ao redor */
+    gap: 1rem;
+    /* Define o espaçamento entre os itens */
+    overflow: hidden;
+    /* Esconde o conteúdo que ultrapassa os limites */
+    position: relative;
+    /* Define o posicionamento relativo */
+}
+
+/* Estiliza o fundo verde no lado direito */
+.sobre-produto .fundo-verde {
+    width: 600px;
+    /* Define a largura */
+    height: 410px;
+    /* Define a altura */
+    background-color: #ffffff;
+    /* Define a cor de fundo como verde */
+    border-radius: 74px;
+    /* Define bordas arredondadas */
+    position: relative;
+    /* Define o posicionamento relativo */
+
+}
+
+/* Estiliza a imagem de fundo */
+.imagem-fundo {
+    width: 640px;
+    /* Define a largura */
+    height: 410px;
+    /* Define a altura */
+    border-radius: 160px;
+    /* Define bordas arredondadas */
+    position: absolute;
+    /* Define o posicionamento absoluto */
+    bottom: -10%;
+    /* Posiciona a imagem 8% abaixo do fundo verde */
+    left: -16%;
+    /* Posiciona a imagem 20% à esquerda do fundo verde */
+
+}
+
+/* Estiliza o logo negativo no lado direito */
+.sobre-produto .logo-negativo {
+    width: 150px;
+    /* Define a largura */
+    height: 80px;
+    /* Define a altura */
+
+    /* Define a margem superior */
+    margin-bottom: 50px;
+}

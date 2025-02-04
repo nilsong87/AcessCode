@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    /* Remove a margem padrão de todos os elementos */
+    padding: 0;
+    /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box;
+    /* Define o box-sizing como border-box para todos os elementos */
+}
+
+/* Estilos para a seção 'quem somos' */
+.quem-somos {
+    width: 100%;
+    /* Define a largura como 100% do contêiner pai */
+    height: 100%;
+    /* Define a altura como 100% do contêiner pai */
+    margin: 0;
+    /* Remove margens */
+    font-family: "Nova Square", sans-serif;
+    /* Define a fonte da seção */
+    background-color: #000;
+    /* Define a cor de fundo como preto */
+    color: #fff;
+    /* Define a cor do texto como branco */
+}
+
+.quem-somos1 {
+    padding: 20px;
+    /* Adiciona um padding de 20px ao redor do conteúdo */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.imagem-centralizada {
+    width: 50px;
+    /* Define a largura da imagem como 50px */
+}
+
+.titulo-q {
+    margin: 4px;
+    /* Define uma margem de 4px ao redor do título */
+    font-size: 40px;
+    /* Define o tamanho da fonte como 40px */
+    color: #00ff00;
+    /* Define a cor do texto como verde */
+}
+
+.texto-q {
+    margin: 30px;
+    /* Define uma margem de 30px ao redor do parágrafo */
+    margin-left: 400px;
+    /* Define uma margem à esquerda de 400px */
+    margin-right: 400px;
+    /* Define uma margem à direita de 400px */
+    font-size: 20px;
+    /* Define o tamanho da fonte como 20px */
+    word-spacing: 5px;
+    /* Define espaçamento entre as palavras  */
+}
+
+.titulo2-q {
+    color: #00ff00;
+    /* Define a cor do texto como verde */
+}
+
+.quem-somos1 img {
+    display: block;
+    /* Define a imagem como um bloco */
+    margin: 0 auto;
+    /* Centraliza a imagem horizontalmente */
+    margin-top: 100px;
+    /* Adiciona uma margem superior de 100px */
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-box img {
+    border-radius: 50%;
+    border: 2px solid #00ff00;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 5px;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.green-line {
+    width: 1600px;
+    /* Define a largura como 1600px */
+    height: 2px;
+    /* Define a altura como 2px */
+    background-color: green;
+    /* Define a cor de fundo como verde */
+    margin: 0px auto;
+    /* Centraliza a linha horizontalmente */
+}
+
+.contact-info {
+    display: flex;
+    /* Define o contêiner como flexível */
+    justify-content: space-between;
+    /* Distribui os itens com espaço entre eles */
+    margin: 20px 0;
+    /* Adiciona uma margem vertical de 20px */
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    margin-left: 50px;
+    /* Adiciona uma margem à esquerda de 50px */
+    font-size: 20px;
+    /* Define o tamanho da fonte como 20px */
+
+}
+
+.contact-info div {
+    margin: 0 5px;
+    /* Adiciona uma margem horizontal de 5px */
+}
+
+.titulo-contato {
+    margin-left: 80px;
+    /* Adiciona uma margem à esquerda de 80px */
+    font-size: 18px;
+    /* Define o tamanho da fonte como 18px */
+    color: #ffffff;
+}
+
+.link-verde2 {
+    margin: 5px;
+    /* Adiciona uma margem de 5px */
+    margin-left: 80px;
+    /* Adiciona uma margem à esquerda de 80px */
+    color: green;
+    /* Define a cor do texto como verde */
+}
+
+.link-verde2:hover {
+    color: #006400;
+    /* Define uma cor diferente ao passar o mouse */
+}
+
+.link-azul {
+    font-size: 20px;
+    /* Define o tamanho da fonte como 20px */
+    margin: 1px;
+    /* Adiciona uma margem de 1px */
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #007BFF;
+    /* Define a cor do texto como azul */
+}
+
+.link-cinza {
+    font-size: 20px;
+    /* Define o tamanho da fonte como 20px */
+    margin: 1px;
+    /* Adiciona uma margem de 1px */
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #8c9196;
+    /* Define a cor do texto como azul */
+}
+
+.link-roxo {
+    font-size: 20px;
+    /* Define o tamanho da fonte como 20px */
+    margin: 1px;
+    /* Adiciona uma margem de 1px */
+    color: #8d00b1;
+    /* Define a cor do texto como roxo */
+}
+
+.faq-ed {
+    margin-right: 1250px;
+    /* Adiciona uma margem à direita de 1250px */
+    font-size: 18px;
+    /* Define o tamanho da fonte como 18px */
+}
+
+.footer {
+    text-align: center;
+    /* Centraliza o texto */
+    margin: 20px 0;
+    /* Adiciona uma margem vertical de 20px */
+    color: #006400;
+    /* Define a cor do texto como verde escuro */
+}

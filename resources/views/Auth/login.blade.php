@@ -6,7 +6,8 @@
     <meta name="description" content="Acess Code - Página de Manutenção">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    @vite('resources/css/style.css')
+    @vite('resources/css/manutencao.css')
+    @vite('resources/js/script.js')
     <title>Acess Code - Login / Manutenção</title>
 </head>
 <body class="bg-black">
@@ -39,16 +40,19 @@
     <div class="d-flex justify-content-center">
         <img class="tema border-green" src="{{ Vite::asset('resources/assets/image/manutenção.jpg') }}" alt="Programadores com deficiência auditiva">
     </div>
+
     <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
     </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-    @vite('resources/js/script.js')
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    });
+  </script>
+
 </body>
 </html>

@@ -54,7 +54,7 @@ header {
 nav ul {
     display: flex;
     /* Define o layout como flexbox */
-    gap: 20px;
+    gap: 100px;
     /* Define o espaçamento entre os itens */
     list-style: none;
     /* Remove a estilização padrão de listas */
@@ -97,6 +97,39 @@ nav a {
     /* Define o cursor como pointer (mãozinha) */
 }
 
+.main-container {
+    position: relative; /* Importante para o posicionamento absoluto do .frase-container */
+    width: 100%; /* Ajuste conforme necessário */
+    height: auto; /* Ajuste conforme necessário */
+}
+
+.main-ft {
+    display: block; /* Garante que a imagem ocupe o espaço disponível */
+    width: 100%;
+    height: auto;
+}
+
+.frase-container {
+    position: absolute;
+    bottom: 550px; /* Ajuste a posição vertical conforme necessário */
+    left: 50px; /* Ajuste a posição horizontal conforme necessário */
+    z-index: 10; /* Certifique-se de que a frase fique acima da imagem */
+    color: white; /* Cor do texto */
+    text-shadow: 1px 1px 2px black; /* Sombra para melhorar a legibilidade */
+    font-family: "Nova Square", sans-serif; /* Define a fonte do botão */
+}
+
+.frase-main {
+    position: relative;
+    font-size: 5em; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold; /* Deixa o texto em negrito */
+    line-height: 1.2; /* Ajusta o espaçamento entre linhas */
+    text-align: left; /* Alinha o texto à esquerda */
+    z-index: 1;
+    
+    
+}
+
 /* Menu responsivo */
 .menu-icon {
     display: none;
@@ -107,6 +140,61 @@ nav a {
     /* Define o cursor como pointer (mãozinha) */
     color: rgb(255, 255, 255);
     /* Define a cor do ícone como branco */
+}
+
+#videoModal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o modal */
+    z-index: 200; /* Garante que o modal fique acima de todos os outros elementos */
+    width: 80%; /* Ajuste a largura conforme necessário */
+    max-width: 800px; /* Largura máxima do modal */
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente para efeito modal */
+    padding: 20px; /* Espaçamento interno */
+    /* Outros estilos que você já tiver para o modal */
+}
+
+.modal-content2 {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #2bff00;
+}
+
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Container da Main */
@@ -130,40 +218,43 @@ nav a {
 /*
 Algumas instruções para por o texto e a imagem da propaganda da pagina sobre a foto da "main"!!!
 
-.main-container: Define a posição relativa para que os elementos filhos possam ser posicionados em relação a ela.
+.main-container: relativa; /* Define a posição relativa para que os elementos filhos possam ser posicionados em relação a ela.
 .main-ft: Define a largura e altura da imagem principal.
 .overlay: Define a posição absoluta para centralizar o contêiner que contém o texto e a imagem do logo.
 .overlay .text: Define o estilo do texto, alinhando-o à esquerda.
 .overlay .logo: Define o estilo da imagem do logo, alinhando-a à direita.
 .overlay img: Define o tamanho da imagem do logo.
-.overlay h2 e .overlay p: Define o estilo do texto sobreposto. 
+.overlay h2 e .overlay p: Define o estilo do texto sobreposto.
 */
+
 
 /* Folder da Home */
 .folder {
     position: absolute;
     /* Define o posicionamento absoluto */
-    top: 50%;
+    top: 45%;
     /* Posiciona o folder no centro vertical */
-    left: 50%;
+    left: 85%;
     /* Posiciona o folder no centro horizontal */
     transform: translate(-50%, -50%);
     /* Centraliza o folder */
     background-color: rgba(0, 0, 0, 0.7);
     /* Define a cor de fundo como preto transparente */
     color: rgb(255, 255, 255);
-    /* Define a cor do texto como branco */    
+    /* Define a cor do texto como branco */
     padding: 40px;
     /* Define o padding (espaçamento interno) */
     border-radius: 10px;
     /* Define bordas arredondadas */
     text-align: center;
     /* Centraliza o texto */
-    width: 100%;
+    width: 20%;
     /* Define a largura como 80% do elemento pai */
     max-width: 600px;
     /* Define a largura máxima */
-    
+    height: 60%;
+    max-height: 600px;
+
 }
 
 /* Botão para fechar o folder */
@@ -196,59 +287,8 @@ Algumas instruções para por o texto e a imagem da propaganda da pagina sobre a
 }
 
 .folder .login-btn {
-    margin-top: 20px; /* Espaçamento acima do botão de login */
-  }
-
-/* Login e Cadastro */
-.modal {
-    display: none;
-    /* Esconde o modal */
-    position: fixed;
-    /* Define o posicionamento fixo */
-    z-index: 1;
-    /* Define a ordem de empilhamento */
-    left: 0;
-    /* Posiciona o modal à esquerda */
-    top: 0;
-    /* Posiciona o modal no topo */
-    width: 100%;
-    /* Define a largura como 100% do elemento pai */
-    height: 100%;
-    /* Define a altura como 100% do elemento pai */
-    overflow: auto;
-    /* Adiciona barra de rolagem se necessário */
-    background-color: rgba(0, 0, 0, 0.5);
-    /* Define a cor de fundo como preto transparente */
-}
-
-.modal-content {
-    background-color: rgb(255, 255, 255, 0.9);
-    /* Define a cor de fundo */
-    color: #006400;
-    margin: 15% auto;
-    /* Centraliza o modal verticalmente e horizontalmente */
-    padding: 20px;
-    /* Define o padding (espaçamento interno) */
-    border: 1px solid #888;
-    /* Define a borda */
-    width: 80%;
-    /* Define a largura como 80% do elemento pai */
-    max-width: 400px;
-    /* Define a largura máxima */
-    border-radius: 10px;
-    /* Define bordas arredondadas */
-}
-
-/* Botão para fechar o Login e Cadastro */
-.close {
-    color: #000000;
-    /* Define a cor do texto como preto */
-    float: right;
-    /* Alinha o botão à direita */
-    font-size: 28px;
-    /* Define o tamanho da fonte */
-    font-weight: bold;
-    /* Define o peso da fonte como negrito */
+    margin-top: 20px;
+    /* Espaçamento acima do botão de login */
 }
 
 .close:hover,
@@ -257,41 +297,6 @@ Algumas instruções para por o texto e a imagem da propaganda da pagina sobre a
     /* Define a cor do texto como preto ao passar o mouse ou focar */
     text-decoration: none;
     /* Remove a decoração do texto */
-    cursor: pointer;
-    /* Define o cursor como pointer (mãozinha) */
-}
-
-/* Inputs e Botões do Login e Cadastro */
-.modal form {
-    display: flex;
-    /* Define o layout como flexbox */
-    flex-direction: column;
-    /* Define a direção dos itens como coluna */
-}
-
-.modal form input {
-    margin-bottom: 10px;
-    /* Define a margem inferior */
-    padding: 10px;
-    /* Define o padding (espaçamento interno) */
-    border: 1px solid #000000;
-    /* Define a borda */
-    border-radius: 4px;
-    /* Define bordas arredondadas */
-}
-
-.modal form button {
-    padding: 10px;
-    /* Define o padding (espaçamento interno) */
-    background-color: #00b100;
-    /* Define a cor de fundo */
-    font-weight: 900;
-    color: #000000;
-    /* Define a cor do texto como branco */
-    border: none;
-    /* Remove a borda */
-    border-radius: 4px;
-    /* Define bordas arredondadas */
     cursor: pointer;
     /* Define o cursor como pointer (mãozinha) */
 }
@@ -324,1076 +329,195 @@ Algumas instruções para por o texto e a imagem da propaganda da pagina sobre a
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/* Página FAQ */
-/* Medidas do corpo do FAQ e Imagem de Fundo */
-.body-faq {
-    width: 100%;
-    /* Define a largura como 100% do elemento pai */
-    height: 100%;
-    /* Define a altura como 70% da altura da viewport */
-    background-image: url(../assets/image/tema-faq.webp);
-    /* Define a imagem de fundo */
-    background-size: 100%;
-    /* Faz a imagem de fundo cobrir todo o elemento */
-    background-repeat: no-repeat;
-    /* Impede a repetição da imagem de fundo */
-}
-
-.faq {
-    display: flex;
-    /* Define o layout como flexbox */
-    justify-content: space-between;
-    /* Distribui os itens com espaço entre eles */
-    align-items: center;
-    /* Alinha os itens ao centro verticalmente */
-    width: 100%;
-    /* Define a largura como 100% do elemento pai */
-    height: 50px;
-    /* Define a altura do header */
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Define a cor de fundo como preto transparente */
-    padding: 10px 20px;
-    /* Define o padding (espaçamento interno) */
-    position: fixed;
-    /* Fixa o header no topo da página */
-    top: 0;
-    /* Posiciona o header no topo */
-    z-index: 1;
-    /* Define a ordem de empilhamento */
-}
-
-.corpo-faq {
-    height: 800px;
-    /* Define a altura como 600px */
-    display: flex;
-    /* Define o layout como flexbox */
-    align-items: center;
-    /* Alinha os itens ao centro verticalmente */
-    margin-left: 680px;
-    /* Define a margem esquerda */
-    margin-top: 100px;
-    /* Define a margem superior */
-}
-
-.titulo-faq {
-    color: #07c500;
-    /* Define a cor do texto como verde */
-}
-
-.faq-container {
-    background-color: #fff;
-    /* Define a cor de fundo como branco */
-    padding: 20px;
-    /* Define o padding (espaçamento interno) */
-    border-radius: 10px;
-    /* Define bordas arredondadas */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Adiciona uma sombra ao redor do container */
-    width: 80%;
-    /* Define a largura como 80% do elemento pai */
-    max-width: 600px;
-    /* Define a largura máxima */
-    max-height: 700px;
-    /* Define a altura máxima */
-    text-align: center;
-    /* Centraliza o texto */
-}
-
-.faq-button {
-    display: block;
-    /* Define o botão como um bloco */
-    width: 100%;
-    /* Define a largura como 100% do elemento pai */
-    padding: 10px;
-    /* Define o padding (espaçamento interno) */
-    margin: 10px 0;
-    /* Define a margem superior e inferior */
-    background-color: #fff;
-    /* Define a cor de fundo como branco */
-    color: #000;
-    /* Define a cor do texto como preto */
-    border: 2px solid #00ff00;
-    /* Define a borda como verde-cana */
-    border-radius: 5px;
-    /* Define bordas arredondadas */
-    cursor: pointer;
-    /* Define o cursor como pointer (mãozinha) */
-    font-size: 20px;
-    /* Define o tamanho da fonte */
-    font-weight: bolder;
-    /* Define o peso da fonte como negrito */
-}
-
-.texto-faq {
-    font-size: 14px;
-    /* Define o tamanho da fonte */
-}
-
-.faq-content {
-    display: none;
-    /* Esconde o conteúdo do FAQ por padrão */
-    margin-top: 10px;
-    /* Define a margem superior */
-    text-align: center;
-    /* Centraliza o texto */
-}
-
-/*----------------------------------------------------------------------------------------------------------------------------------------------*/
-/*  início Página sobre */
-
-/* Estiliza a seção sobre o produto */
-.sobre-produto {
-    width: 100%;
-    /* Define a largura como 100% do elemento pai */
-    height: 1080px;
-    display: flex;
-    /* Define o layout como flexbox */
-    justify-content: center;
-    /* Centraliza os itens horizontalmente */
-    padding-top: 10rem;
-    /* Define o padding superior */
-    padding-bottom: 5rem;
-    /* Define o padding inferior */
-    background-color: #fff;
-}
-
-/* Estiliza o lado esquerdo da seção sobre o produto */
-.sobre-produto .lado-esquerdo {
-    width: 40%;
-    /* Define a largura como 40% do elemento pai */
-    display: flex;
-    /* Define o layout como flexbox */
-    align-items: center;
-    /* Alinha os itens ao centro verticalmente */
-    flex-direction: column;
-    /* Define a direção dos itens como coluna */
-}
-
-/* Estiliza o primeiro filho div do lado esquerdo */
-.sobre-produto .lado-esquerdo div:nth-child(1) {
-    display: flex;
-    /* Define o layout como flexbox */
-    align-items: start;
-    /* Alinha os itens ao início verticalmente */
-    justify-content: start;
-    /* Alinha os itens ao início horizontalmente */
-    flex-direction: column;
-    /* Define a direção dos itens como coluna */
-    gap: 0.1rem;
-    /* Define o espaçamento entre os itens */
-    margin-bottom: 6rem;
-    /* Define a margem inferior */
-}
-
-/* Estiliza o título h2 dentro do primeiro filho div do lado esquerdo */
-.sobre-produto .lado-esquerdo div:nth-child(1) h2 {
-    color: #00ff00;
-    /* Define a cor do texto como verde */
-    width: 448px;
-    /* Define a largura */
-    height: 122px;
-    /* Define a altura */
-    font-size: 40px;
-    /* Define o tamanho da fonte */
-    text-align: center;
-    /* Centraliza o texto */
-    line-height: 40px;
-    /* Define a altura da linha */
-    margin-left: 175px;
-    /* Define a margem esquerda */
-    margin-top: 90px;
-    /* Define a margem superior */
-}
-
-/* Estiliza o botão no lado esquerdo */
-.sobre-produto .lado-esquerdo button {
-    margin-right: 30px;
-    /* Define a margem direita */
-    width: 238.11px;
-    /* Define a largura */
-    height: 55px;
-    /* Define a altura */
-}
-
-/* Estiliza o texto sobre o produto */
-.texto-sobre {
-    font-size: 22px;
-    /* Define o tamanho da fonte */
-    text-align: center;
-    /* Centraliza o texto */
-    line-height: 25px;
-    /* Define a altura da linha */
-}
-
-/* Estiliza o lado direito da seção sobre o produto */
-.sobre-produto .lado-direito {
-    width: 50%;
-    /* Define a largura como 50% do elemento pai */
-    display: flex;
-    /* Define o layout como flexbox */
-    flex-direction: column;
-    /* Define a direção dos itens como coluna */
-    align-items: end;
-    /* Alinha os itens ao final horizontalmente */
-    justify-content: space-around;
-    /* Distribui os itens com espaço ao redor */
-    gap: 1rem;
-    /* Define o espaçamento entre os itens */
-    overflow: hidden;
-    /* Esconde o conteúdo que ultrapassa os limites */
-    position: relative;
-    /* Define o posicionamento relativo */
-}
-
-/* Estiliza o fundo verde no lado direito */
-.sobre-produto .fundo-verde {
-    width: 538px;
-    /* Define a largura */
-    height: 406px;
-    /* Define a altura */
-    background-color: #00ff00;
-    /* Define a cor de fundo como verde */
-    border-radius: 74px;
-    /* Define bordas arredondadas */
-    position: relative;
-    /* Define o posicionamento relativo */
-}
-
-/* Estiliza a imagem de fundo */
-.imagem-fundo {
-    width: 590px;
-    /* Define a largura */
-    height: 406px;
-    /* Define a altura */
-    border-radius: 160px;
-    /* Define bordas arredondadas */
-    position: absolute;
-    /* Define o posicionamento absoluto */
-    bottom: -8%;
-    /* Posiciona a imagem 8% abaixo do fundo verde */
-    left: -20%;
-    /* Posiciona a imagem 20% à esquerda do fundo verde */
-}
-
-/* Estiliza o logo negativo no lado direito */
-.sobre-produto .logo-negativo {
-    width: 200px;
-    /* Define a largura */
-    height: 130px;
-    /* Define a altura */
-    margin-top: 14px;
-    /* Define a margem superior */
-}
-
-/* fim Página sobre */
-
-/*----------------------------------------------------------------------------------------------------------------------------------------------*/
-
-/* Estilos para a seção 'quem somos' */
-.quem-somos {
-    width: 100%;
-    /* Define a largura como 100% do contêiner pai */
-    height: 100%;
-    /* Define a altura como 100% do contêiner pai */
-    margin: 0;
-    /* Remove margens */
-    font-family: "Nova Square", sans-serif;
-    /* Define a fonte da seção */
-    background-color: #000;
-    /* Define a cor de fundo como preto */
-    color: #fff;
-    /* Define a cor do texto como branco */
-}
-
-.quem-somos1 {
-    padding: 20px;
-    /* Adiciona um padding de 20px ao redor do conteúdo */
-    text-align: center;
-    /* Centraliza o texto */
-}
-
-.imagem-centralizada {
-    width: 50px;
-    /* Define a largura da imagem como 50px */
-}
-
-.titulo-q {
-    margin: 4px;
-    /* Define uma margem de 4px ao redor do título */
-    font-size: 40px;
-    /* Define o tamanho da fonte como 40px */
-    color: #00ff00;
-    /* Define a cor do texto como verde */
-}
-
-.texto-q {
-    margin: 30px;
-    /* Define uma margem de 30px ao redor do parágrafo */
-    margin-left: 400px;
-    /* Define uma margem à esquerda de 400px */
-    margin-right: 400px;
-    /* Define uma margem à direita de 400px */
-    font-size: 20px;
-    /* Define o tamanho da fonte como 20px */
-    word-spacing: 5px;
-    /* Define espaçamento entre as palavras  */
-}
-
-.titulo2-q {
-    color: #00ff00;
-    /* Define a cor do texto como verde */
-}
-
-.quem-somos1 img {
-    display: block;
-    /* Define a imagem como um bloco */
-    margin: 0 auto;
-    /* Centraliza a imagem horizontalmente */
-    margin-top: 100px;
-    /* Adiciona uma margem superior de 100px */
-}
-
-.carousel-container {
-    display: flex;
-    /* Define o contêiner como flexível */
-    align-items: center;
-    /* Alinha os itens ao centro verticalmente */
-    justify-content: center;
-    /* Centraliza os itens horizontalmente */
-    position: sticky;
-    /* Define a posição como fixa durante o scroll */
-    width: 50%;
-    /* Define a largura como 50% do contêiner pai */
-    margin: 0 auto;
-    /* Centraliza o contêiner horizontalmente */
-    overflow: hidden;
-    /* Esconde o conteúdo que ultrapassa os limites do contêiner */
-}
-
-.carousel {
-    display: flex;
-    /* Define o carrossel como flexível */
-    transition: transform 0.5s ease-in-out;
-    /* Adiciona uma transição suave para a transformação */
-    width: calc(200px * 4);
-    /* Define a largura para mostrar 4 caixas */
-}
-
-.carousel-box {
-    min-width: 200px;
-    /* Define a largura mínima das caixas como 200px */
-    margin: 15px;
-    /* Adiciona uma margem de 15px ao redor das caixas */
-    text-align: center;
-    /* Centraliza o texto dentro das caixas */
-    gap: 5px;
-    /* Define um espaço de 5px entre os itens */
-    flex: 0 0 33%;
-    /* Define a largura das caixas para mostrar 3 caixas */
-}
-
-.carousel-box img {
-    border-radius: 50%;
-    /* Define as bordas das imagens como arredondadas */
-    border: 2px solid #00ff00;
-    /* Adiciona uma borda de 2px de largura e cor verde */
-    width: 140px;
-    /* Define a largura das imagens como 140px */
-    height: 140px;
-    /* Define a altura das imagens como 140px */
-    margin-bottom: 5px;
-    /* Adiciona uma margem inferior de 5px */
-}
-
-.disabled {
-    opacity: 0.5;
-    /* Define a opacidade como 0.5 para indicar desabilitado */
-    pointer-events: none;
-    /* Desabilita os eventos de ponteiro */
-}
-
-.carousel-buttons {
-    position: absolute;
-    /* Define a posição como absoluta */
-    top: 60%;
-    /* Define a posição superior como 60% */
-    width: 100%;
-    /* Define a largura como 100% do contêiner pai */
-    display: flex;
-    /* Define o contêiner como flexível */
-    justify-content: space-between;
-    /* Distribui os botões com espaço entre eles */
-    transform: translateY(-50%);
-    /* Move os botões verticalmente para o centro */
-}
-
-.carousel-buttons button {
-    background-color: #fff;
-    /* Define a cor de fundo como branco */
-    border: none;
-    /* Remove as bordas */
-    padding: 10px;
-    /* Adiciona um padding de 10px */
-    cursor: pointer;
-    /* Define o cursor como ponteiro */
-    transition: background-color 0.3s;
-    /* Adiciona uma transição suave para a cor de fundo */
-}
-
-.carousel-buttons button:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    /* Define a cor de fundo ao passar o mouse */
-}
-
-.green-line {
-    width: 1600px;
-    /* Define a largura como 1600px */
-    height: 2px;
-    /* Define a altura como 2px */
-    background-color: green;
-    /* Define a cor de fundo como verde */
-    margin: 0px auto;
-    /* Centraliza a linha horizontalmente */
-}
-
-.contact-info {
-    display: flex;
-    /* Define o contêiner como flexível */
-    justify-content: space-between;
-    /* Distribui os itens com espaço entre eles */
-    margin: 20px 0;
-    /* Adiciona uma margem vertical de 20px */
-    text-align: left;
-    /* Alinha o texto à esquerda */
-    margin-left: 50px;
-    /* Adiciona uma margem à esquerda de 50px */
-    font-size: 20px;
-    /* Define o tamanho da fonte como 20px */
-    
-}
-
-.contact-info div {
-    margin: 0 5px;
-    /* Adiciona uma margem horizontal de 5px */
-}
-
-.titulo-contato {
-    margin-left: 80px;
-    /* Adiciona uma margem à esquerda de 80px */
-    font-size: 18px;
-    /* Define o tamanho da fonte como 18px */
-    color: #ffffff;
-}
-
-.link-verde2 {
-    margin: 5px;
-    /* Adiciona uma margem de 5px */
-    margin-left: 80px;
-    /* Adiciona uma margem à esquerda de 80px */
-    color: green;
-    /* Define a cor do texto como verde */
-}
-
-.link-verde2:hover {
-    color: #006400;
-    /* Define uma cor diferente ao passar o mouse */
-}
-
-.link-azul {
-    font-size: 20px;
-    /* Define o tamanho da fonte como 20px */
-    margin: 1px;
-    /* Adiciona uma margem de 1px */
-    color: #007BFF;
-    /* Define a cor do texto como azul */
-}
-
-.link-cinza {
-    font-size: 20px;
-    /* Define o tamanho da fonte como 20px */
-    margin: 1px;
-    /* Adiciona uma margem de 1px */
-    color: #8c9196;
-    /* Define a cor do texto como azul */
-}
-
-.link-roxo {
-    font-size: 20px;
-    /* Define o tamanho da fonte como 20px */
-    margin: 1px;
-    /* Adiciona uma margem de 1px */
-    color: #8d00b1;
-    /* Define a cor do texto como roxo */
-}
-
-.faq-ed {
-    margin-right: 1250px;
-    /* Adiciona uma margem à direita de 1250px */
-    font-size: 18px;
-    /* Define o tamanho da fonte como 18px */
-}
-
-.footer {
-    text-align: center;
-    /* Centraliza o texto */
-    margin: 20px 0;
-    /* Adiciona uma margem vertical de 20px */
-    color: #006400;
-    /* Define a cor do texto como verde escuro */
-}
-
-/*----------------------------------------------------------------------------------------------------------------------------------------------*/
-/* página do app */
-
-/* Estilo da área principal do jogo */
-.game-board {
-    display: grid;
-    /* Define o layout como grid */
-    width: 100%;
-    /* Define a largura como 100% do elemento pai */
-    height: 100%;
-    justify-content: left;
-    /* Alinha os itens à esquerda */
-    grid-template-areas:
-        /* Define as áreas do grid */
-        'header-app area-de-montagem video'
-        'header-app info info';
-    gap: 24px;
-    /* Define o espaçamento entre os itens do grid */
-}
-
-/* Estilo do cabeçalho do aplicativo */
-.header-app {
-    background-color: black;
-    /* Define a cor de fundo como preto */
-    grid-area: header-app;
-    /* Define a área do grid */
-    width: 288px;
-    /* Define a largura */
-    height: 100%;
-    /* Define a altura como 100% do elemento pai */
-    padding-left: 60px;
-    /* Define o padding à esquerda */
-    padding-top: 36px;
-    /* Define o padding superior */
-    justify-content: center;
-    /* Centraliza os itens horizontalmente */
-}
-
-/* Retângulo do Menu */
-.pecas {
-    background-color: white;
-    /* Define a cor de fundo como branco */
-    width: 175px;
-    /* Define a largura */
-    height: 564px;
-    /* Define a altura */
-    border-radius: 10px;
-    /* Define bordas arredondadas */
-    margin-top: 30px;
-    /* Define a margem superior */
-    margin: 3px;
-    /* Define a margem */
-    text-align: center;
-    /* Centraliza o texto */
-
-}
-
-/* Texto do Menu */
-.blocos {
-    color: #00ff00;
-    /* Define a cor do texto como verde */
-    font-family: 'coda', sans-serif;
-    /* Define a fonte */
-    font-size: 20px;
-    /* Define o tamanho da fonte */
-    padding-left: 12px;
-    /* Define o padding à esquerda */
-    margin: 0.3px;
-    /* Define a margem */
-}
-
-/* Quadrado da Esquerda */
-.area-de-montagem {
-    grid-area: area-de-montagem;
-    /* Define a área do grid */
-    width: 35vw;
-    /* Define a largura como 35% da largura da viewport */
-    height: 393px;
-    /* Define a altura */
-    margin-top: 25px;
-    /* Define a margem superior */
-    margin-left: 35px;
-    /* Define a margem à esquerda */
-    border: 1px solid black;
-    /* Define a borda */
-    background-color: white;
-    /* Define a cor de fundo como branco */
-    border-radius: 5px;
-    /* Define bordas arredondadas */
-    font-family: 'coda';
-    /* Define a fonte */
-    font-size: 20px;
-    /* Define o tamanho da fonte */
-    text-align: center;
-    /* Centraliza o texto */
-}
-
-/* Quadrado da Direita */
-.video {
-    grid-area: video;
-    /* Define a área do grid */
-    width: 35vw;
-    /* Define a largura como 35% da largura da viewport */
-    height: 393px;
-    /* Define a altura */
-    margin-top: 25px;
-    /* Define a margem superior */
-    margin-left: 35px;
-    /* Define a margem à esquerda */
-    border: 1px solid black;
-    /* Define a borda */
-    background-color: white;
-    /* Define a cor de fundo como branco */
-    border-radius: 5px;
-    /* Define bordas arredondadas */
-    font-family: 'coda';
-    /* Define a fonte */
-    font-size: 20px;
-    /* Define o tamanho da fonte */
-    text-align: center;
-    /* Centraliza o texto */
-}
-
-/* Retângulo de baixo */
-.info {
-    grid-area: info;
-    /* Define a área do grid */
-    height: 400px;
-    /* Define a altura */
-    margin-left: 35px;
-    /* Define a margem à esquerda */
-    border: 1px solid black;
-    /* Define a borda */
-    background-color: #FFFCFC;
-    /* Define a cor de fundo */
-    margin-bottom: 20px;
-    /* Define a margem inferior */
-    margin-top: 45px;
-    /* Define a margem superior */
-    border-radius: 5px;
-    /* Define bordas arredondadas */
-    font-family: 'coda';
-    /* Define a fonte */
-    font-size: 20px;
-    /* Define o tamanho da fonte */
-    text-align: center;
-    /* Centraliza o texto */
-}
-
-/* Estilo do logo */
-.img-logo {
-    width: 120px;
-    /* Define a largura */
-    margin-left: 29px;
-    /* Define a margem à esquerda */
-}
-
-/* Estilo da fonte */
-.fonte {
-    display: inline-block;
-    /* Define o display como inline-block */
-    font-family: 'nova square', sans-serif;
-    /* Define a fonte */
-    font-size: 12px;
-    /* Define o tamanho da fonte */
-    text-align: center;
-    /* Centraliza o texto */
-}
-
-/* Configuração dos botões */
-.bg-white {
-    background-color: white;
-    /* Define a cor de fundo como branco */
-    color: #44F435;
-    /* Define a cor do texto */
-    border-radius: 15px;
-    /* Define bordas arredondadas */
-    padding: 10px;
-    /* Define o padding */
-    margin-left: 12px;
-    /* Define a margem à esquerda */
-}
-
-/* Estilo do ícone de ajuda */
-.icon {
-    font-size: 18px;
-    /* Define o tamanho da fonte */
-    margin-left: 7px;
-    /* Define a margem à esquerda */
-    color: #00ff00;
-    /* Define a cor do texto */
-}
-
-/* Estilo do cabeçalho */
-.header-header {
-    font-size: 20px;
-    /* Define o tamanho da fonte */
-    color: #44F435;
-    /* Define a cor do texto */
-    gap: 5px;
-    /* Define o espaçamento entre os itens */
-    margin-top: 5px;
-    /* Define a margem superior */
-    margin-left: 8px;
-    /* Define a margem à esquerda */
-}
-
-/* Estilo dos links */
-.link-verde {
-    color: green;
-    /* Define a cor verde para os links */
-}
-
-.link-verde:hover {
-    color: #006400;
-    /* Define uma cor diferente ao passar o mouse */
-}
-
-.link-verde1:hover {
-    color: #006400;
-    /* Define uma cor diferente ao passar o mouse */
-}
-
-
-/* Estilo para o título h1 */
-h1 {
-    color: #333;
-    /* Define a cor do texto como cinza escuro */
-}
-
-/* Estilo para o botão de execução */
-.botaoj {
-    padding: 10px 20px;
-    /* Define o padding interno do botão */
-    margin-top: 20px;
-    /* Define a margem superior do botão */
-    background-color: #4CAF50;
-    /* Define a cor de fundo do botão */
-    color: white;
-    /* Define a cor do texto do botão */
-    border: none;
-    /* Remove a borda do botão */
-    cursor: pointer;
-    /* Define o cursor como ponteiro ao passar o mouse */
-    font-size: 16px;
-    /* Define o tamanho da fonte do botão */
-}
-
-/* Estilo para o botão ao passar o mouse */
-button:hover {
-    background-color: #45a049;
-    /* Muda a cor de fundo do botão ao passar o mouse */
-}
-
-
-/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-/* página de Login e manutenção */
-
-
-/* Estilo para fixar o botão de acessibilidade */
-.vw-access-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-/* Estilo para o corpo principal da página */
-.corpo4 {
-    display: flex;
-    /* Define um layout flexível */
-    flex-direction: column;
-    /* Alinha os itens em uma coluna */
-    align-items: center;
-    /* Centraliza os itens horizontalmente */
-    width: 100%;
-    /* Define a largura como 100% */
-    height: 100%;
-    padding: 20px;
-    /* Adiciona um preenchimento de 20px */
-    background-color: #f8f9fa;
-    /* Define a cor de fundo */
-}
-
-/* Estilo para o cabeçalho da aplicação */
-.header-app4 {
-    background-color: black;
-    /* Define a cor de fundo como preto */
-    width: 100%;
-    /* Define a largura como 100% */
-    padding: 20px;
-    /* Adiciona um preenchimento de 20px */
-    display: flex;
-    /* Define um layout flexível */
-    justify-content: space-between;
-    /* Distribui os itens com espaço entre eles */
-    align-items: center;
-    /* Centraliza os itens verticalmente */
-    color: white;
-    /* Define a cor do texto como branco */
-}
-
-/* Estilo para o logo da aplicação */
-.img-logo4 {
-    width: 100px;
-    /* Define a largura do logo */
-}
-
-/* Estilo para a fonte */
-.fonte4 {
-    font-family: 'nova square', sans-serif;
-    /* Define a família da fonte */
-    font-size: 12px;
-    /* Define o tamanho da fonte */
-    text-align: center;
-    /* Centraliza o texto */
-}
-
-/* Estilo para o título do cabeçalho */
-.header-header4 {
-    font-size: 20px;
-    /* Define o tamanho da fonte */
-    color: #44F435;
-    /* Define a cor do texto */
-}
-
-/* Estilo para os títulos dos níveis */
-.titulo-niveis {
-    font-size: 24px;
-    /* Define o tamanho da fonte */
-    color: #333;
-    /* Define a cor do texto */
-    margin: 20px 0;
-    /* Adiciona uma margem vertical */
-}
-
-/* Estilo para a área de montagem */
-.area-de-montagem4 {
-    width: 100%;
-    /* Define a largura como 100% */
-    max-width: 1200px;
-    /* Define a largura máxima */
-    background-color: white;
-    /* Define a cor de fundo */
-    border: 1px solid #ddd;
-    /* Adiciona uma borda */
-    border-radius: 5px;
-    /* Define o raio da borda */
-    padding: 20px;
-    /* Adiciona um preenchimento de 20px */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* Adiciona uma sombra */
-}
-
-/* Estilo para o contêiner de informações */
-.info-container {
-    display: flex;
-    /* Define um layout flexível */
-    flex-direction: column;
-    /* Alinha os itens em uma coluna */
-    gap: 10px;
-    /* Define um espaço entre os itens */
-    margin-bottom: 20px;
-    /* Adiciona uma margem inferior */
-}
-
-/* Estilo para a área do modal */
-.modal-area {
-    display: flex;
-    /* Define um layout flexível */
-    justify-content: center;
-    /* Centraliza os itens horizontalmente */
-    margin-bottom: 20px;
-    /* Adiciona uma margem inferior */
-}
-
-/* Estilo para os botões de filtro */
-.filter-buttons {
-    display: flex;
-    /* Define um layout flexível */
-    justify-content: center;
-    /* Centraliza os itens horizontalmente */
-    gap: 10px;
-    /* Define um espaço entre os itens */
-    margin-bottom: 20px;
-    /* Adiciona uma margem inferior */
-}
-
-/* Estilo para a lista de arquivos */
-.file-list {
-    display: flex;
-    /* Define um layout flexível */
-    flex-wrap: wrap;
-    /* Permite que os itens quebrem para a próxima linha */
-    gap: 20px;
-    /* Define um espaço entre os itens */
-    justify-content: center;
-    /* Centraliza os itens horizontalmente */
-}
-
-/* Estilo para cada item de arquivo */
-.file-item {
-    position: relative;
-    /* Define a posição como relativa */
-    border: 1px solid #ccc;
-    /* Adiciona uma borda */
-    padding: 10px;
-    /* Adiciona um preenchimento de 10px */
-    border-radius: 5px;
-    /* Define o raio da borda */
-    width: 200px;
-    /* Define a largura */
-    text-align: center;
-    /* Centraliza o texto */
-    background-color: #f9f9f9;
-    /* Define a cor de fundo */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    /* Adiciona uma sombra */
-}
-
-/* Estilo para a imagem do arquivo */
-.file-image {
-    max-width: 100%;
-    /* Define a largura máxima */
-    width: 90%;
-    /* Define a largura */
-    height: auto;
-    /* Mantém a proporção da imagem */
-}
-
-/* Estilo para o botão de deletar */
-.delete-button {
-    position: absolute;
-    /* Define a posição como absoluta */
-    top: 5px;
-    /* Define a posição superior */
-    right: 5px;
-    /* Define a posição à direita */
-    background-color: red;
-    /* Define a cor de fundo */
-    color: white;
-    /* Define a cor do texto */
-    border: none;
-    /* Remove a borda */
-    border-radius: 50%;
-    /* Define o raio da borda */
-    width: 25px;
-    /* Define a largura */
-    height: 25px;
-    /* Define a altura */
-    display: flex;
-    /* Define um layout flexível */
-    align-items: center;
-    /* Centraliza os itens verticalmente */
-    justify-content: center;
-    /* Centraliza os itens horizontalmente */
-    cursor: pointer;
-    /* Define o cursor como pointer */
-}
-
-/* Estilo para o cabeçalho da aplicação com borda verde */
-.header-app5 {
-    background-color: rgba(255, 255, 255, 0.5);
-    /* Define a cor de fundo com transparência */
-    border-radius: 20px;
-    /* Define o raio da borda */
-    margin-top: 10px;
-    /* Adiciona uma margem superior */
-    border: 2px solid #32CD32;
-    /* Define a cor da borda */
-    width: 100%;
-    /* Define a largura como 100% */
-    max-height: 60%;
-    padding: 18px;
-    /* Adiciona um preenchimento de 18px */
-    display: flex;
-    /* Define um layout flexível */
-    justify-content: space-between;
-    /* Distribui os itens com espaço entre eles */
-    align-items: center;
-    /* Centraliza os itens verticalmente */
-    color: white;
-    /* Define a cor do texto */
-}
-
-/* Estilo para a mensagem de erro */
-.error-message {
-    color: red;
-    /* Define a cor do texto */
-    font-weight: bold;
-    /* Define o peso da fonte */
-}
-
-/* Estilo para o card de erro */
-.error-card {
-    background-color: rgba(255, 0, 0, 0.1);
-    /* Define a cor de fundo com transparência */
-    border: 1px solid red;
-    /* Define a cor da borda */
-}
-
-/* Estilo para o título da página */
-.titulo-pagm {
-    font-size: 30px;
-    /* Define o tamanho da fonte */
-}
-
-/* Estilo para o título do log */
-.titulo-log {
-    margin-top: 50px;
-    color: #00b100;
-    /* Define a cor do texto */
-}
-
-/* Estilo para o corpo com fundo preto */
-body.bg-black {
-    background-color: #000000;
-    /* Define a cor de fundo */
-}
-
-/* Estilo para o texto branco */
-.text-white {
-    color: #FFFFFF;
-    /* Define a cor do texto */
-}
-
-/* Estilo para o título estilizado */
-.styled-title {
-    color: #FFFFFF;
-    /* Define a cor do texto */
-    letter-spacing: 0.1em;
-    /* Define o espaçamento entre as letras */
-}
-
-/* Estilo para o tema */
-.tema {
-    border: 2px solid #32CD32;
-    /* Define a cor da borda */
-    border-radius: 10px;
-    /* Define o raio da borda */
-    max-width: 100%;
-    /* Define a largura máxima */
-    height: auto;
-    /* Mantém a proporção da imagem */
-}
-
 /* Responsividade*/
 
-/*Pagina index*/
-/*Pagina faq*/
-/*Pagina manutencao*/
-/*Pagina login*/
-/*Pagina App*/
+/* Index */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .login-btn {
+        margin-top: 10px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-content2 {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .login-btn {
+        margin-top: 10px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modal-content2 {
+        width: 90%;
+    }
+
+    .lado-esquerdo,
+    .lado-direito {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .carousel {
+        flex-direction: column;
+    }
+
+    .carousel-box {
+        min-width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Faq */
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+    }
+
+    .faq-container {
+        padding: 10px;
+    }
+
+    .faq-button {
+        padding: 8px;
+    }
+
+    .faq-content {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .modal-content {
+        padding: 15px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/*App*/
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+    }
+
+    .faq-container {
+        padding: 10px;
+    }
+
+    .faq-button {
+        padding: 8px;
+    }
+
+    .faq-content {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .modal-content {
+        padding: 15px;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    button[type="submit"] {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .header-app {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fonte {
+        margin-top: 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pecas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .area-de-montagem,
+    .video,
+    .info {
+        margin: 10px 0;
+        max-width: 100%;
+    }
+}
 

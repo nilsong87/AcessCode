@@ -20,23 +20,18 @@ return new class extends Migration
 
      */
 
-    public function up()
-
-    {
-
-        Schema::create('pecas', function (Blueprint $table) {
-
-            $table->id('idPecas');
-
-            $table->integer('pecas');
-
-            $table->text('img_pecas');
-
-            $table->primary('idPecas');
-
-        });
-
-    }
+     public function up()
+     {
+         Schema::create('files', function (Blueprint $table) {
+             $table->id();
+             $table->string('name');
+             $table->string('path');
+             $table->text('description')->nullable();
+             $table->integer('level');
+             $table->timestamps();
+         });
+     }
+     
  
     /**
 

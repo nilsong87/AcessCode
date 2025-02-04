@@ -1,40 +1,35 @@
 <?php
  
-use Illuminate\Database\Migrations\Migration;
-
-use Illuminate\Database\Schema\Blueprint;
-
-use Illuminate\Support\Facades\Schema;
+ use Illuminate\Database\Migrations\Migration;
+ use Illuminate\Database\Schema\Blueprint;
+ use Illuminate\Support\Facades\Schema;
  
-return new class extends Migration
-
-{
-
-    public function up()
-
-    {
-
-        Schema::create('nivel_has_pecas', function (Blueprint $table) {
-
-            $table->unsignedBigInteger('Nivel_idNivel');
-
-            $table->unsignedBigInteger('Pecas_idPecas');
-
-            $table->foreign('Nivel_idNivel')->references('idNivel')->on('nivel')->onDelete('NO ACTION')->onUpdate('NO ACTION');
-
-            $table->foreign('Pecas_idPecas')->references('idPecas')->on('pecas')->onDelete('NO ACTION')->onUpdate('NO ACTION');
-
-        });
-
-    }
+ class CreateFilesTable extends Migration
+ {
+     /**
+      * Run the migrations.
+      *
+      * @return void
+      */
+     public function up()
+     {
+         Schema::create('files', function (Blueprint $table) {
+             $table->id();
+             $table->string('path'); // Caminho para o arquivo armazenado
+             $table->string('description'); // Descrição do arquivo
+             $table->integer('level'); // Nível do arquivo
+             $table->timestamps(); // Timestamps de criação e atualização
+         });
+     }
  
-
-    public function down()
-
-    {
-
-        Schema::dropIfExists('nivel_has_pecas');
-
-    }
-
-};
+     /**
+      * Reverse the migrations.
+      *
+      * @return void
+      */
+     public function down()
+     {
+         Schema::dropIfExists('files');
+     }
+ }
+ 

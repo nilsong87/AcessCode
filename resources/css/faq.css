@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    /* Remove a margem padrão de todos os elementos */
+    padding: 0;
+    /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box;
+    /* Define o box-sizing como border-box para todos os elementos */
+}
+
+/* Página FAQ */
+/* Medidas do corpo do FAQ e Imagem de Fundo */
+.body-faq {
+    width: 100%;
+    /* Define a largura como 100% do elemento pai */
+    height: 100%;
+    /* Define a altura como 70% da altura da viewport */
+
+}
+
+.faq {
+    display: flex;
+    /* Define o layout como flexbox */
+    justify-content: space-between;
+    /* Distribui os itens com espaço entre eles */
+    align-items: center;
+    /* Alinha os itens ao centro verticalmente */
+    width: 100%;
+    /* Define a largura como 100% do elemento pai */
+    height: 50px;
+    /* Define a altura do header */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Define a cor de fundo como preto transparente */
+    padding: 10px 20px;
+    /* Define o padding (espaçamento interno) */
+    position: fixed;
+    /* Fixa o header no topo da página */
+    top: 0;
+    /* Posiciona o header no topo */
+    z-index: 1;
+    /* Define a ordem de empilhamento */
+}
+
+.corpo-faq {
+    height: 800px;
+    /* Define a altura como 600px */
+    display: flex;
+    /* Define o layout como flexbox */
+    align-items: center;
+    /* Alinha os itens ao centro verticalmente */
+    margin-left: 650px;
+    /* Define a margem esquerda */
+    margin-top: 100px;
+    /* Define a margem superior */
+}
+
+.titulo-faq {
+    color: #07c500;
+    /* Define a cor do texto como verde */
+}
+
+.faq-container {
+    background-color: #fff;
+    /* Define a cor de fundo como branco */
+    padding: 20px;
+    /* Define o padding (espaçamento interno) */
+    border-radius: 10px;
+    /* Define bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Adiciona uma sombra ao redor do container */
+    width: 80%;
+    /* Define a largura como 80% do elemento pai */
+    max-width: 600px;
+    /* Define a largura máxima */
+    max-height: 700px;
+    /* Define a altura máxima */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.faq-button {
+    display: block;
+    /* Define o botão como um bloco */
+    width: 100%;
+    /* Define a largura como 100% do elemento pai */
+    padding: 10px;
+    /* Define o padding (espaçamento interno) */
+    margin: 10px 0;
+    /* Define a margem superior e inferior */
+    background-color: #fff;
+    /* Define a cor de fundo como branco */
+    color: #000;
+    /* Define a cor do texto como preto */
+    border: 2px solid #00ff00;
+    /* Define a borda como verde-cana */
+    border-radius: 5px;
+    /* Define bordas arredondadas */
+    cursor: pointer;
+    /* Define o cursor como pointer (mãozinha) */
+    font-size: 20px;
+    /* Define o tamanho da fonte */
+    font-weight: bolder;
+    /* Define o peso da fonte como negrito */
+}
+
+.texto-faq {
+    font-size: 14px;
+    /* Define o tamanho da fonte */
+}
+
+.faq-content {
+    display: none;
+    /* Esconde o conteúdo do FAQ por padrão */
+    margin-top: 10px;
+    /* Define a margem superior */
+    text-align: center;
+    /* Centraliza o texto */
+}

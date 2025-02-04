@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    /* Remove a margem padrão de todos os elementos */
+    padding: 0;
+    /* Remove o padding padrão de todos os elementos */
+    box-sizing: border-box;
+    /* Define o box-sizing como border-box para todos os elementos */
+}
+
+/* Botão de acessibilidade */
+.vw-access-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: block;
+    opacity: 1;
+}
+
+/* Corpo principal da página */
+.corpo4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+/* Cabeçalho da aplicação */
+.header-app4 {
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.img-logo4 {
+    width: 100px;
+}
+
+/* Fonte */
+.fonte4 {
+    font-family: 'Nova Square', sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Título do cabeçalho */
+.header-header4 {
+    font-size: 20px;
+    color: #44F435;
+}
+
+/* Títulos dos níveis */
+.titulo-niveis {
+    font-size: 24px;
+    color: #333;
+    margin: 20px 0;
+}
+
+/* Área de montagem */
+.area-de-montagem4 {
+    width: 100%;
+    max-width: 1200px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contêiner de informações */
+.info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Área do modal */
+.modal-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Botões de filtro */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Lista de arquivos */
+.file-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Cada item de arquivo */
+.file-item {
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagem do arquivo */
+.file-image {
+    max-width: 100%;
+    width: 90%;
+    height: auto;
+}
+
+/* Botão de deletar */
+.delete-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Cabeçalho com borda verde */
+.header-app5 {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    margin-top: 10px;
+    border: 2px solid #32CD32;
+    width: 100%;
+    max-height: 60%;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+/* Mensagem de erro */
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+/* Card de erro */
+.error-card {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 1px solid red;
+}
+
+/* Título da página */
+.titulo-pagm {
+    font-size: 30px;
+}
+
+/* Título do log */
+.titulo-log {
+    margin-top: 50px;
+    color: #00b100;
+}
+
+/* Corpo com fundo preto */
+body.bg-black {
+    background-color: #000000;
+}
+
+/* Texto branco */
+.text-white {
+    color: #FFFFFF;
+}
+
+/* Título estilizado */
+.styled-title {
+    color: #FFFFFF;
+    letter-spacing: 0.1em;
+}
+
+/* Tema */
+.tema {
+    border: 2px solid #32CD32;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}

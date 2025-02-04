@@ -15,4 +15,6 @@ class Auth
         // Permite que a solicitação continue
         return $next($request);
     }
+    
 }
+
